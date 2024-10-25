@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vue Basics</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>Vue Course Goals</h1>
+</header>
+<section id="user-goal">
+    <h2>My Course Goal</h2>
+    <!--      插值语法-->
+    <!--    不会被渲染，只传递text值，可防止脚本攻击-->
+    <p>{{courseGoal}}</p>
+    <!--    渲染传值（不安全）-->
+    <p v-html="courseGoal"></p>
+    <!--      v-bind-->
+    <p>Learn more about <a v-bind:href="vueLink">VUE</a></p>
+    <!--      调用vue方法-->
+    <p>{{getRandomNumber()}}</p>
+    <!--    vue方法中的方法获取data中的值-->
+    <p>{{getData()}}</p>
+    <!--    简单表达式-->
+    <p>{{1 + 1}}</p>
+</section>
+</body>
+</html>

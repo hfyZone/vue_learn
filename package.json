@@ -1,0 +1,12 @@
+{
+  "name": "vue_learn",
+  "version": "1.0.0",
+  "description": "此项目意在快速记录vue3的基础功能，弱化底层强调实战。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
