@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vue Basics</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>Vue Events</h1>
+</header>
+<section id="events">
+    <h2>Events in Action</h2>
+    <!--      VUE绑定事件-->
+    <!--    v-on接受方法名（接受参数）或表达式-->
+    <button v-on:click="addCounter">Add</button>
+    <!--    点击鼠标中键-->
+    <button v-on:click.middle="reduceCounter(5)">Reduce</button>
+    <p>Result: {{ counter }}</p>
+    <label>
+        Your name:
+        <!--        时时渲染-->
+        <input type="text" v-on:input="setName1('Kong')"/>
+        <input type="text" v-on:input="setName2($event, 'Kong')"/>
+    </label>
+    <p>Your name is {{name}}</p>
+    <!--    VUE阻止默认事件-->
+    <form v-on:submit.prevent="submitForm">
+        <button>SUBMIT IT!</button>
+    </form>
+</section>
+</body>
+</html>
